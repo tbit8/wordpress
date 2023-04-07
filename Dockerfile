@@ -20,6 +20,8 @@ RUN curl -O https://wordpress.org/latest.tar.gz && \
 
 COPY wp-config.php /var/www/html
 
+RUN ls /var/www/html
+
 RUN apt-get update && apt-get install net-tools wget && \
     wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/local/bin/cloud_sql_proxy && \ 
     chmod +x /usr/local/bin/cloud_sql_proxy
