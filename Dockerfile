@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install net-tools wget && \
 # Set up Nginx configuration
 COPY nginx.conf /etc/nginx/sites-available/default
 
-RUN sudo chown -R www-data: /var/www/html
+RUN chown -R www-data: /var/www/html
 
 # Expose port 80
 EXPOSE 80
