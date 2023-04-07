@@ -18,8 +18,6 @@ RUN curl -O https://wordpress.org/latest.tar.gz && \
 
 # Set up Nginx configuration
 COPY nginx.conf /etc/nginx/sites-available/default
-RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default && \
-    rm /etc/nginx/sites-enabled/default
 
 # Expose port 80
 EXPOSE 80
