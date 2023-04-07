@@ -15,6 +15,8 @@ RUN docker-php-ext-install mysqli pdo_mysql
 RUN curl -O https://wordpress.org/latest.tar.gz && \
     tar -xzf latest.tar.gz --strip-components=1 && \
     rm latest.tar.gz
+    
+RUN rm /var/www/html/wp-admin/setup-config.php
 
 # Set up Nginx configuration
 COPY nginx.conf /etc/nginx/sites-available/default
