@@ -20,6 +20,11 @@ RUN rm /var/www/html/wp-admin/setup-config.php
 
 COPY wp-config.php /var/www/html
 
+RUN apt-get update && apt-get install net-tools wget && \
+    wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/local/bin/cloud_sql_proxy && \ 
+    chmod +x /usr/local/bin/cloud_sql_proxy
+    
+
 # Set up Nginx configuration
 COPY nginx.conf /etc/nginx/sites-available/default
 
