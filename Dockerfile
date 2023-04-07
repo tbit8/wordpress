@@ -16,7 +16,7 @@ RUN curl -O https://wordpress.org/latest.tar.gz && \
     tar -xzf latest.tar.gz --strip-components=1 && \
     rm latest.tar.gz
     
-RUN rm /var/www/html/wp-admin/setup-config.php
+#RUN rm /var/www/html/wp-admin/setup-config.php
 
 COPY wp-config.php /var/www/html
 
