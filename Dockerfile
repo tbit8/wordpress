@@ -18,6 +18,8 @@ RUN curl -O https://wordpress.org/latest.tar.gz && \
     
 RUN rm /var/www/html/wp-admin/setup-config.php
 
+COPY wp-config.php /var/www/html
+
 # Set up Nginx configuration
 COPY nginx.conf /etc/nginx/sites-available/default
 
