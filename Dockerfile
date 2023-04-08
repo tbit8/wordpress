@@ -19,6 +19,7 @@ RUN curl -O https://wordpress.org/latest.tar.gz && \
 #RUN rm /var/www/html/wp-admin/setup-config.php
 
 COPY wp-config.php /var/www/html
+COPY uploads.ini /usr/local/etc/php/conf.d
 
 RUN ls /var/www/html
 
