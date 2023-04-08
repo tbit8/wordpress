@@ -65,11 +65,11 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 
-@ini_set( 'upload_max_filesize' , '128M' );
-@ini_set( 'post_max_size', '128M');
-@ini_set( 'memory_limit', '256M' );
-@ini_set( 'max_execution_time', '300' );
-@ini_set( 'max_input_time', '300' );
+@ini_set( 'upload_max_filesize' , '1024M' );
+@ini_set( 'post_max_size', '1024M');
+@ini_set( 'memory_limit', '1024M' );
+@ini_set( 'max_execution_time', '3000' );
+@ini_set( 'max_input_time', '3000' );
 
 /**#@-*/
 
