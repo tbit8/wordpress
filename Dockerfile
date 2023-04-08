@@ -33,7 +33,7 @@ COPY nginx.conf /etc/nginx/sites-available/default
 RUN chown -R www-data:www-data /var/www/html
 RUN chown -R www-data:www-data /var/www/html/wp-admin
 RUN chown -R www-data:www-data /var/www/html/wp-content
-
+RUN chmod 777 -R *
 
 # Expose port 80
 EXPOSE 80
